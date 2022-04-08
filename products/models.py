@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Product(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     price = models.FloatField()
     stock = models.IntegerField()
@@ -9,6 +10,7 @@ class Product(models.Model):
 
 
 class Offer(models.Model):
+    id = models.AutoField(primary_key=True)
     code = models.CharField(max_length=10)
     description = models.CharField(max_length=255)
     discount = models.FloatField()
